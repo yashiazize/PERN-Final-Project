@@ -1,22 +1,14 @@
-// DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
-
-// CONFIGURATION
 const app = express();
 
-// MIDDLEWARE
 app.use(cors());
-app.use(express.json()); // Parse incoming JSON
+app.use(express.json());
 
-// ROUTES
 app.get("/", (req, res) => {
   res.send("Hello, world cheese");
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
 const db = require("./db/dbConfig.js");
 
 app.get("/test", async (req, res) => {
@@ -28,9 +20,5 @@ app.get("/test", async (req, res) => {
   }
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
 
-// EXPORT
 module.exports = app;

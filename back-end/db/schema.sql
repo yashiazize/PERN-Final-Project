@@ -1,4 +1,9 @@
+-- DROP DATABASE IF EXISTS travel_packages_dev;
+-- CREATE DATABASE travel_packages_dev;
+-- \c travel_packages_dev;
+
 DROP TABLE IF EXISTS travel_packages;
+
 
 CREATE TABLE travel_packages (
     id SERIAL PRIMARY KEY, 

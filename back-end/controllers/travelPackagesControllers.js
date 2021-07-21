@@ -1,7 +1,12 @@
 const express = require("express");
 const travelpackages = express.Router();
 
-const { fetchAllPackages, fetchPackage, newPackage } = require("../queries/travelPackages");
+const {
+  fetchAllPackages,
+  fetchPackage,
+  newPackage,
+  updatePackage, deletePackage
+} = require("../queries/travelPackages");
 
 travelpackages.get("/", async (req, res) => {
   const allPackages = await fetchAllPackages();
@@ -15,8 +20,20 @@ travelpackages.get("/:id", async (req, res) => {
 });
 
 travelpackages.post("/", async (req, res) => {
-  const createdPackage = await newPackage(req.body)
-  res.json(createdPackage)
-})
+  const createdPackage = await newPackage(req.body);
+  res.json(createdPackage);
+});
+
+travelpackages.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  const updatedPackage = await updatePackage(id, req.body);
+  res.json(updatedPackage);
+});
+
+travelpackages.delete("/:id", async (req, res) => {
+  const { id } = req.params;
+  const deletedPackage = await deletePackage(id)
+  res.json(deletedPackage)
+});
 
 module.exports = travelpackages;

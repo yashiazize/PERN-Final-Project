@@ -1,4 +1,4 @@
--- \c travel_packages_dev;
+\c travel_packages_dev;
 
 
 INSERT INTO travel_packages (package_name, description, img_url, location, in_stock, price) VALUES 

@@ -1,7 +1,7 @@
 const express = require("express");
 const travelpackages = express.Router();
 
-const { fetchAllPackages, fetchPackage } = require("../queries/travelPackages");
+const { fetchAllPackages, fetchPackage, newPackage } = require("../queries/travelPackages");
 
 travelpackages.get("/", async (req, res) => {
   const allPackages = await fetchAllPackages();
@@ -13,5 +13,10 @@ travelpackages.get("/:id", async (req, res) => {
   const package = await fetchPackage(id);
   res.json(package);
 });
+
+travelpackages.post("/", async (req, res) => {
+  const createdPackage = await newPackage(req.body)
+  res.json(createdPackage)
+})
 
 module.exports = travelpackages;

@@ -19,24 +19,24 @@ const App = () => {
         <NavBar />
         <main>
           <Switch>
-            <Route exact path="/">
+            {/* <Route exact path="/">
               <Home />
             </Route>
             <Route exact path="/travelPackages">
               <Index />
             </Route>
-            <Route exact path="/travelPackages/new">
+            <Route path="/travelPackages/new">
               <New />
             </Route>
             <Route exact path="/travelPackages/:id">
               <Show />
             </Route>
-            <Route exact path="/travelPackages/edit">
+            <Route path="/travelPackages/edit">
               <Edit />
             </Route>
             <Route exact path="*">
               <FourOFour />
-            </Route>
+            </Route> */}
           </Switch>
         </main>
       </Router>

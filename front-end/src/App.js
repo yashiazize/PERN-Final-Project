@@ -1,16 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import "./App.css"
 //Pages
 import Home from '../src/pages/Home'
-import Index from '../src/pages/Index'
-import Show from '../src/pages/Show'
-import Edit from '../src/pages/Edit'
-import New from '../src/pages/New'
 import FourOFour from '../src/pages/FourOFour'
 
 //Components 
 
 import NavBar from '../src/components/NavBar'
+import PackagesList from "./components/PackagesList";
 
 const App = () => {
   return (
@@ -19,19 +16,19 @@ const App = () => {
         <NavBar />
         <main>
           <Switch>
-            {/* <Route exact path="/">
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path="/travelPackages">
-              <Index />
+            <Route exact path="/travelpackages">
+              <PackagesList />
             </Route>
-            <Route path="/travelPackages/new">
+            {/* <Route path="/travelpackages/new">
               <New />
             </Route>
-            <Route exact path="/travelPackages/:id">
+            <Route exact path="/travelpackages/:id">
               <Show />
             </Route>
-            <Route path="/travelPackages/edit">
+            <Route path="/travelpackages/edit">
               <Edit />
             </Route>
             <Route exact path="*">

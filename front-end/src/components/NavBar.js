@@ -4,8 +4,8 @@ import "./NavBar.css"
 const NavBar = () => {
   return (
     <nav>
-      <Link to="/travelPackages">Nomadix</Link>
-      <Link to="/travelPackages/new">Create new Package</Link>
+      <Link to="/travelpackages">Nomadix</Link>
+      <Link to="/travelpackages/new">Create new Package</Link>
     </nav>
   );
 };

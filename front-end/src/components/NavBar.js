@@ -4,10 +4,10 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav>
-      <Link to="/travelPackages">Nomadix</Link>
-      <button>
-        <Link className="newButton" to="/travelPackages/new">Create new Package</Link>
-      </button>
+      <Link to="/travelpackages">Nomadix</Link>
+      <Link className="newButton" to="/travelPackages/new">
+        Create new Package
+      </Link>
     </nav>
   );
 };

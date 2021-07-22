@@ -4,11 +4,10 @@ import React from 'react'
 function PackageListItem({packageObj}) {
     return (
         <div>
-            {packageObj.package_name}
-            {packageObj.price}
             <img src={packageObj.img_url} />
-            {packageObj.location}
-            {packageObj.in_stock}
+            <p>{packageObj.package_name}</p>
+            <p>Price: ${packageObj.price}</p>
+            <p>{packageObj.in_stock}</p>
             
         </div>
     )

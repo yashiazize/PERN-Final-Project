@@ -19,7 +19,7 @@ const PackagesList = () => {
     getAllPackages();
   }, []);
   return (
-    <section>
+    <section className="packagesList">
       {packages
         .sort((a, b) => (a.id > b.id ? 1 : -1))
         .map((packageObj) => {

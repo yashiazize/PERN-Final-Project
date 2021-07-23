@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;500&display=swap');
+
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 40px;
   background-color: #207eb4;
   height: 100px;
   align-items: center;
-  font-size: 50px;
+  font-size: 60px;
   font-family: 'Lobster', cursive;
-  box-shadow: 0px 5px 5px grey;
+  box-shadow: 0px 5px 5px rgb(163, 163, 163);
 }
 nav img {
   height: 50px;
@@ -29,8 +32,9 @@ nav a:link {
 
 .newLink {
   font-size: 18px;
-  border: 3px solid rgb(212, 212, 212);
-  padding: 5px;
-  border-radius: 5px;
+  border: 2px solid;
+  padding: 8px;
+  border-radius: 3px;
+  font-family: 'Barlow', sans-serif;
 }
 

@@ -31,10 +31,10 @@ const App = () => {
             </Route>
             <Route path="/travelpackages/edit">
               <Edit />
-            </Route>
+            </Route> */}
             <Route exact path="*">
               <FourOFour />
-            </Route> */}
+            </Route> 
           </Switch>
         </main>
       </Router>

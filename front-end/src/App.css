@@ -1,0 +1,12 @@
+
+.packagesList {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+
+  

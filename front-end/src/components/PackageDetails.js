@@ -46,7 +46,7 @@ const PackageDetails = () => {
       <p>In Stock: {tripPackage.in_stock}</p>
       <p>Price: {tripPackage.price}</p>
       <button onClick={handleDelete}>Delete</button>
-      <Link to={`/travelpackages/${tripPackage.id}/edit`}><button>Edit</button></Link>
+      <Link to={`/travelpackages/${id}/edit`}><button>Edit</button></Link>
      <Link to={"/travelpackages"}><button>Go Back</button></Link> 
     </section>
   );

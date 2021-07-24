@@ -41,6 +41,7 @@ let history = useHistory();
     return (
     <section>
       <form onSubmit={handleSubmit}>
+        <h1>Package New Form</h1>
         <label htmlFor="package_name">Package Name:</label>
         <input
           id="package_name"

@@ -9,7 +9,7 @@ import FourOFour from '../src/pages/FourOFour'
 import NavBar from '../src/components/NavBar'
 import PackagesList from "./components/PackagesList";
 import PackagesNewForm from "./components/PackagesNewForm";
-import PackagesEditForm from "./components/PackagesNewForm";
+import PackagesEditForm from "./components/PackagesEditForm";
 import PackageDetails from "./components/PackageDetails";
 
 const App = () => {
@@ -31,10 +31,10 @@ const App = () => {
             <Route exact path="/travelpackages/:id">
               <PackageDetails />
             </Route>
-            <Route path="/travelpackages/edit">
+            <Route exact path="/travelpackages/:id/edit">
               <PackagesEditForm />
             </Route>
-            <Route exact path="*">
+            <Route path="*">
               <FourOFour />
             </Route> 
           </Switch>

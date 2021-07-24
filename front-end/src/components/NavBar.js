@@ -5,8 +5,8 @@ const NavBar = () => {
   return (
     <nav>
       <Link to="/travelpackages">Nomadix</Link>
-      <Link className="newLink" to="/travelPackages/new">
-        Create new package
+      <Link className="newLink" to="/travelpackages/new">
+        Create new Package
       </Link>
     </nav>
   );

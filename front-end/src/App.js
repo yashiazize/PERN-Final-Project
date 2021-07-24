@@ -9,6 +9,8 @@ import FourOFour from '../src/pages/FourOFour'
 import NavBar from '../src/components/NavBar'
 import PackagesList from "./components/PackagesList";
 import PackagesNewForm from "./components/PackagesNewForm";
+import PackagesEditForm from "./components/PackagesEditForm";
+import PackageDetails from "./components/PackageDetails";
 
 const App = () => {
   return (
@@ -26,13 +28,13 @@ const App = () => {
             <Route path="/travelpackages/new">
               <PackagesNewForm />
             </Route>
-            {/* <Route exact path="/travelpackages/:id">
-              <Show />
+            <Route exact path="/travelpackages/:id">
+              <PackageDetails />
             </Route>
-            <Route path="/travelpackages/edit">
-              <Edit />
-            </Route> */}
-            <Route exact path="*">
+            <Route exact path="/travelpackages/:id/edit">
+              <PackagesEditForm />
+            </Route>
+            <Route path="*">
               <FourOFour />
             </Route> 
           </Switch>

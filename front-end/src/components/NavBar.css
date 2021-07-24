@@ -5,11 +5,11 @@
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  padding: 50px;
   background-color: #207eb4;
   height: 100px;
   align-items: center;
-  font-size: 60px;
+  font-size: 55px;
   font-family: 'Lobster', cursive;
   box-shadow: 0px 5px 5px rgb(163, 163, 163);
 }
@@ -31,10 +31,10 @@ nav a:link {
 }
 
 .newLink {
-  font-size: 18px;
+  font-size: 14px;
   border: 2px solid;
-  padding: 8px;
-  border-radius: 3px;
+  padding: 6px;
+  border-radius: 5px;
   font-family: 'Barlow', sans-serif;
 }
 

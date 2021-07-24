@@ -51,59 +51,91 @@ const PackagesEditForm = () => {
     setTripPackage({ ...tripPackage, in_stock: !tripPackage.in_stock });
   };
   return (
-    <form onSubmit={handleSubmit}>
-        <h1>Package Edit Form</h1>
-      <label htmlFor="package_name">Package Name</label>
-      <input
-        id="package_name"
-        value={tripPackage.package_name}
-        type="text"
-        onChange={handleTextChange}
-        required
-      />
-      <label htmlFor="description">Description</label>
-      <input
-        id="description"
-        value={tripPackage.description}
-        type="text"
-        onChange={handleTextChange}
-        required
-      />
-      <label htmlFor="img_url">Image URL</label>
-      <input
-        id="img_url"
-        value={tripPackage.img_url}
-        type="text"
-        onChange={handleTextChange}
-        required
-      />
-      <label htmlFor="location">Location</label>
-      <input
-        id="location"
-        value={tripPackage.location}
-        type="text"
-        onChange={handleTextChange}
-        required
-      />
-      <label htmlFor="in_stock">In Stock</label>
-      <input
-        id="in_stock"
-        value={tripPackage.in_stock}
-        type="checkbox"
-        onChange={handleCheckBox}
-        placeholder="In Stock"
-      />
-      <label htmlFor="price">Price</label>
-      <input
-        id="price"
-        value={tripPackage.price}
-        type="text"
-        onChange={handleTextChange}
-        placeholder="Price"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <section className="editFormContainer">
+      <h3> Edit Package Form</h3>
+      <form>
+        <div className="mb-3">
+          <label htmlFor="package_name" className="form-label">
+            Package Name
+          </label>
+          <input
+            id="package_name"
+            value={tripPackage.package_name}
+            type="text"
+            className="form-control"
+            onChange={handleTextChange}
+            required
+          />
+        </div>
+        <div className="mb=3">
+          <label htmlFor="location" className="form-label">
+            Location
+          </label>
+          <input
+            id="location"
+            type="text"
+            className="form-control"
+            required
+            value={tripPackage.location}
+            onChange={handleTextChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="img_url" className="form-label">
+            Image Url
+          </label>
+          <input
+            id="img_url"
+            type="url"
+            required
+            className="form-control"
+            value={tripPackage.img_url}
+            onChange={handleTextChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="price" className="form-label">
+            Price
+          </label>
+          <input
+            id="price"
+            type="number"
+            className="form-control"
+            required
+            value={tripPackage.price}
+            onChange={handleTextChange}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="description" className="form-label">
+            Description
+          </label>
+          <input
+            id="description"
+            type="text"
+            required
+            className="form-control"
+            value={tripPackage.description}
+            onChange={handleTextChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="in_stock" className="form-check-label">
+            In stock
+          </label>
+          <input
+            id="in_stock"
+            type="checkbox"
+            name="in_stock"
+            checked={tripPackage.in_stock}
+            onChange={handleCheckBox}
+          />
+        </div>
+        <button type="submit" onSubmit={handleSubmit} className="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </section>
   );
 };
 

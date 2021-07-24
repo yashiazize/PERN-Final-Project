@@ -39,8 +39,9 @@ const PackagesNewForm = () => {
     history.push("/travelpackages");
   };
   return (
-    <section>
-      <form className="newFormContainer">
+    <section className="newFormContainer">
+      <h3> New Package Form</h3>
+      <form>
         <div className="mb-3">
           <label htmlFor="package_name" className="form-label">
             Package Name
@@ -107,7 +108,7 @@ const PackagesNewForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="in_stock" class="form-check-label">
+          <label htmlFor="in_stock" className="form-check-label">
             In stock
           </label>
           <input
@@ -118,7 +119,7 @@ const PackagesNewForm = () => {
             onChange={handleCheckbox}
           />
         </div>
-        <button type="submit" onSubmit={handleSubmit} class="btn btn-primary">
+        <button type="submit" onSubmit={handleSubmit} className="btn btn-primary">
           Submit
         </button>
       </form>

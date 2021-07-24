@@ -47,18 +47,18 @@ const PackagesEditForm = () => {
     setTripPackage({ ...tripPackage, [e.target.id]: e.target.value });
   };
 
-  const handleCheckBox = (e) => {
+  const handleCheckBox = () => {
     setTripPackage({ ...tripPackage, in_stock: !tripPackage.in_stock });
   };
   return (
     <form onSubmit={handleSubmit}>
         <h1>Package Edit Form</h1>
-      <label htmlFor="packageName">Package Name</label>
+      <label htmlFor="package_name">Package Name</label>
       <input
-        id="packageName"
+        id="package_name"
         value={tripPackage.package_name}
         type="text"
-        placeholder="Package Name"
+        onChange={handleTextChange}
         required
       />
       <label htmlFor="description">Description</label>
@@ -67,16 +67,14 @@ const PackagesEditForm = () => {
         value={tripPackage.description}
         type="text"
         onChange={handleTextChange}
-        placeholder="Description"
         required
       />
-      <label htmlFor="imageURL">Image URL</label>
+      <label htmlFor="img_url">Image URL</label>
       <input
-        id="imageURL"
+        id="img_url"
         value={tripPackage.img_url}
         type="text"
         onChange={handleTextChange}
-        placeholder="Image URL"
         required
       />
       <label htmlFor="location">Location</label>
@@ -85,12 +83,11 @@ const PackagesEditForm = () => {
         value={tripPackage.location}
         type="text"
         onChange={handleTextChange}
-        placeholder="Location"
         required
       />
-      <label htmlFor="inStock">In Stock</label>
+      <label htmlFor="in_stock">In Stock</label>
       <input
-        id="inStock"
+        id="in_stock"
         value={tripPackage.in_stock}
         type="checkbox"
         onChange={handleCheckBox}

@@ -18,7 +18,7 @@
 .newFormContainer {
     text-align: left;
     background-color: rgb(251, 249, 248);
-    border: 5px solid rgb(238, 224, 32);
+    border: 5px solid #ffce2e;
     margin-left: 430px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -52,7 +52,7 @@
 .editFormContainer {
     text-align: left;
     background-color: rgb(251, 249, 248);
-    border: 5px solid rgb(238, 224, 32);
+    border: 5px solid #ffce2e;
     margin-left: 430px;
     margin-top: 40px;
     padding: 30px;

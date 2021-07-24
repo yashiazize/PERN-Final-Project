@@ -53,7 +53,7 @@ const PackagesEditForm = () => {
   return (
     <section className="editFormContainer">
       <h3> Edit Package Form</h3>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="package_name" className="form-label">
             Package Name
@@ -131,9 +131,7 @@ const PackagesEditForm = () => {
             onChange={handleCheckBox}
           />
         </div>
-        <button type="submit" onSubmit={handleSubmit} className="btn btn-primary">
-          Submit
-        </button>
+        <input type="submit" />
       </form>
     </section>
   );

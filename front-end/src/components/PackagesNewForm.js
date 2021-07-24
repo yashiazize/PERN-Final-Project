@@ -41,7 +41,7 @@ const PackagesNewForm = () => {
   return (
     <section className="newFormContainer">
       <h3> New Package Form</h3>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="package_name" className="form-label">
             Package Name
@@ -119,9 +119,7 @@ const PackagesNewForm = () => {
             onChange={handleCheckbox}
           />
         </div>
-        <button type="submit" onSubmit={handleSubmit} className="btn btn-primary">
-          Submit
-        </button>
+        <input type="submit" />
       </form>
     </section>
   );

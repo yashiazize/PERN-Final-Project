@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav>
       <Link to="/travelpackages">Nomadix</Link>
       <Link className="newLink" to="/travelPackages/new">
-        Create new Package
+        Create new package
       </Link>
     </nav>
   );

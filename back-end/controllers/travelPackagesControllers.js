@@ -1,12 +1,14 @@
 const express = require("express");
 const travelpackages = express.Router();
-
+const travelReviewsController = require("./travelReviewsControllers")
 const {
   fetchAllPackages,
   fetchPackage,
   newPackage,
   updatePackage, deletePackage
 } = require("../queries/travelPackages");
+
+travelpackages.use('/:packageId/travelreviews', travelReviewsController)
 
 travelpackages.get("/", async (req, res) => {
   const allPackages = await fetchAllPackages();

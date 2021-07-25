@@ -19,13 +19,16 @@ reviews.get('/:reviewId', async(req, res) =>{
 })
 
 reviews.post('/', async (req, res) => {
-    const newReview = await createReview(req.body);
-    res.json(newReview)
+    const newReview = req.body;
+    const { packageId } = req.params
+    const createdReview = await createReview(packageId, newReview);
+    res.json(createdReview)
 })
 
 reviews.put('/:reviewId', async(req, res) => {
-    const {reviewId} = req.params;
-    const editedReview = await updateReview(reviewId);
+    const review = req.body
+    const { reviewId } = req.params;
+    const editedReview = await updateReview(reviewId, review);
     res.json(editedReview);
 })
 

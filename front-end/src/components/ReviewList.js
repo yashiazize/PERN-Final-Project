@@ -11,7 +11,7 @@ const ReviewList = () => {
 
   useEffect (() => {
       fetchReviews();
-  }, [id, reviews])
+  })
 
   const fetchReviews = async () => {
     try {

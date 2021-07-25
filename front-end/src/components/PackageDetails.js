@@ -62,7 +62,7 @@ const PackageDetails = () => {
                 Description: {tripPackage.description}
               </p>
               <p className="card-text">Price: ${tripPackage.price}</p>
-              <p className="card-text">In Stock: {!tripPackage.is_favorite ? (
+              <p className="card-text">In Stock: {tripPackage.in_stock ? (
           <span>✔️</span>
         ) : (
           <span>❌</span>

@@ -1,5 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Qahiri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+
+.imgContainer img {
+  height: 70vh;
+  width: 33.333vw;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+.homeImg {
+  z-index: 0;
+}
+
+.background .card {
+  margin-left: 34.5vw;
+  background-color: #124c6dca;
+  color: white;
+  border: none;
+  margin-top: 48vh;
+}
+
+.background .card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.est {
+  display: flex;
+  margin-top: 10vh;
+  margin-left: 45vw;
+}
 
 .packagesList {
   margin-top: 40px;
@@ -22,7 +61,7 @@
 .newFormContainer {
   text-align: left;
   background-color: rgb(251, 249, 248);
-  border: 5px solid #ffce2e;
+  border: 4px solid #ffce2e;
   margin-left: 100px;
   margin-top: 40px;
   padding: 30px;
@@ -70,7 +109,7 @@
 .editFormContainer {
   text-align: left;
   background-color: rgb(251, 249, 248);
-  border: 5px solid #ffce2e;
+  border: 4px solid #ffce2e;
   margin-left: 100px;
   margin-top: 40px;
   padding: 30px;
@@ -87,7 +126,7 @@
 
 .packageDetailsButton {
   font-size: 14px;
-  background-color: #207eb4;
+  background-color: #124c6de8;
   color: white;
   padding: 10px;
   border-radius: 5px;

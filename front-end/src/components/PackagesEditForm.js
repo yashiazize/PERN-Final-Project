@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+import editDetailImg from "../assets/edit_form_img.png";
 
 const PackagesEditForm = () => {
   const { id } = useParams();
@@ -51,9 +52,9 @@ const PackagesEditForm = () => {
     setTripPackage({ ...tripPackage, in_stock: !tripPackage.in_stock });
   };
   return (
-    <section className="editFormContainer">
+    <section className="editContainer">
+      <form onSubmit={handleSubmit} className="editFormContainer">
       <h3> Edit Package Form</h3>
-      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="package_name" className="form-label">
             Package Name
@@ -133,6 +134,9 @@ const PackagesEditForm = () => {
         </div>
         <input type="submit" />
       </form>
+      <div>
+        <img src={editDetailImg} className="editDetailImg" />
+      </div>
     </section>
   );
 };

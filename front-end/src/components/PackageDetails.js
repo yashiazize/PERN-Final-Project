@@ -38,6 +38,11 @@ const PackageDetails = () => {
 
   return (
     <section className="detailsContainer">
+      <div className="detailsButtons">
+        <Link to={"/travelpackages"}>
+          <button>Go Back</button>
+        </Link>
+      </div>
       <h4>Package Details</h4>
       <div className="card mb-3" style={{ max_width: "540px" }}>
         <div className="row g-0">
@@ -63,18 +68,15 @@ const PackageDetails = () => {
         )} {tripPackage.in_stock}</p>
               <p class="card-text">
               </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="detailsButtons">
-        <Link to={"/travelpackages"}>
-          <button>Go Back</button>
-        </Link>
+        <div className="detailsButtons">
         <Link to={`/travelpackages/${id}/edit`}>
           <button>Edit</button>
         </Link>
         <button onClick={handleDelete}>Delete</button>
+        </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

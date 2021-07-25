@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { apiURL } from "../util/apiURL";
 import { useHistory } from "react-router-dom";
+import newFormImg from "../assets/new_form_img.png";
 
 const API = apiURL();
 
@@ -39,9 +40,9 @@ const PackagesNewForm = () => {
     history.push("/travelpackages");
   };
   return (
-    <section className="newFormContainer">
+    <section className="newContainer">
+      <form onSubmit={handleSubmit} className="newFormContainer">
       <h3> New Package Form</h3>
-      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="package_name" className="form-label">
             Package Name
@@ -121,6 +122,9 @@ const PackagesNewForm = () => {
         </div>
         <input type="submit" />
       </form>
+      <div>
+        <img src={newFormImg} className="newFormImg" />
+      </div>
     </section>
   );
 };

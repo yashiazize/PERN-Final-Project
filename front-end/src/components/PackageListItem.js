@@ -9,7 +9,7 @@ function PackageListItem({packageObj}) {
             <div className="card-body">
             <h5 className="card-title">{packageObj.package_name}</h5>
             <p>Price: ${packageObj.price}</p>
-            <Link to={`/travelpackages/${packageObj.id}`} className="btn btn-primary">Package Details</Link>
+            <Link className="packageDetailsButton" to={`/travelpackages/${packageObj.id}`}>Package Details</Link>
             </div>
         </div>
     )

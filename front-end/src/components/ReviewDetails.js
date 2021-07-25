@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router";
 import { apiURL } from "../util/apiURL";
 const API = apiURL();
 
-const ReviewDetails = ({ reviewObj }) => {
+const ReviewDetails = ({ reviewObj, fetchReviews }) => {
   const { id } = useParams();
   let history = useHistory();
 
@@ -21,6 +21,7 @@ const ReviewDetails = ({ reviewObj }) => {
 
   const handleDelete = async () => {
     await deleteReview();
+    fetchReviews();
     history.push(`/travelpackages/${id}`);
   };
 

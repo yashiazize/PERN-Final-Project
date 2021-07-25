@@ -10,24 +10,24 @@ const ReviewList = () => {
   const { id } = useParams();
 
   useEffect (() => {
-    const fetchReviews = async () => {
-        try {
-          const res = await axios.get(`${API}/travelpackages/${id}/travelreviews`);
-          setReviews(res.data.payload);
-        } catch (error) {
-          console.log(error);
-        }
-      };
       fetchReviews();
-  }, [id])
+  }, [id, reviews])
 
+  const fetchReviews = async () => {
+    try {
+      const res = await axios.get(`${API}/travelpackages/${id}/travelreviews`);
+      setReviews(res.data.payload);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
       <section>
           <h5 className="header5">Reviews</h5>
           <Link to={`/travelpackages/${id}/travelreview/new`}> <button>New Review</button></Link>
           {reviews.map((reviewObj) => {
-            return  <ReviewDetails key={reviewObj.id} reviewObj={reviewObj} />
+            return  <ReviewDetails key={reviewObj.id} reviewObj={reviewObj} fetchReviews={fetchReviews} />
           })}
       </section>
   )

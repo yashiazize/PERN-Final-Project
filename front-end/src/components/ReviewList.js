@@ -24,11 +24,11 @@ const ReviewList = () => {
 
   return (
       <section>
-          <h1>Reviews</h1>
+          <h5 className="header5">Reviews</h5>
+          <Link to={`/travelpackages/${id}/travelreview/new`}> <button>New Review</button></Link>
           {reviews.map((reviewObj) => {
             return  <ReviewDetails key={reviewObj.id} reviewObj={reviewObj} />
           })}
-         <Link to={`/travelpackages/${id}/travelreview/new`}> <button>New Review</button></Link>
       </section>
   )
 };

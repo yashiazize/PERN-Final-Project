@@ -98,3 +98,24 @@
 a:hover {
   color: white;
 }
+
+.reviewCard{
+  margin-bottom: 20px;
+}
+
+.reviewCard .card {
+  background-color:rgb(251, 249, 248);
+}
+
+.reviewCardButton {
+  text-align: right;
+}
+
+ button {
+  color: black;
+  background-color: white;
+}
+
+.header5 {
+  text-decoration: underline;
+}

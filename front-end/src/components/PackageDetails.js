@@ -67,7 +67,7 @@ const PackageDetails = () => {
         ) : (
           <span>❌</span>
         )} {tripPackage.in_stock}</p>
-              <p class="card-text">
+              <p className="card-text">
               </p>
         <div className="detailsButtons">
         <Link to={`/travelpackages/${id}/edit`}>

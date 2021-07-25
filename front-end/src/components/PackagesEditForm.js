@@ -135,7 +135,7 @@ const PackagesEditForm = () => {
         <input type="submit" />
       </form>
       <div>
-        <img src={editDetailImg} className="editDetailImg" />
+        <img src={editDetailImg} alt="editForm" className="editDetailImg" />
       </div>
     </section>
   );

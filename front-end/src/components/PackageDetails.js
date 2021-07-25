@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { apiURL } from "../util/apiURL";
+import ReviewList from "./ReviewList";
 
 const API = apiURL();
 
@@ -78,6 +79,7 @@ const PackageDetails = () => {
           </div>
         </div>
       </div>
+      <ReviewList id={id}/>
     </section>
   );
 };

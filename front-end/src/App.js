@@ -11,6 +11,7 @@ import PackagesList from "./components/PackagesList";
 import PackagesNewForm from "./components/PackagesNewForm";
 import PackagesEditForm from "./components/PackagesEditForm";
 import PackageDetails from "./components/PackageDetails";
+import ReviewNewForm from "./components/ReviewNewForm";
 
 const App = () => {
   return (
@@ -33,6 +34,9 @@ const App = () => {
             </Route>
             <Route exact path="/travelpackages/:id/edit">
               <PackagesEditForm />
+            </Route>
+            <Route exact path="/travelpackages/:id/travelreview/new">
+              <ReviewNewForm/>
             </Route>
             <Route path="*">
               <FourOFour />

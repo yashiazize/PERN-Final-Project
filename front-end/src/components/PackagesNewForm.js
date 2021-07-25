@@ -123,7 +123,7 @@ const PackagesNewForm = () => {
         <input type="submit" />
       </form>
       <div>
-        <img src={newFormImg} className="newFormImg" />
+        <img src={newFormImg} alt="newFormImg" className="newFormImg" />
       </div>
     </section>
   );

@@ -30,6 +30,7 @@ const PackagesNewForm = () => {
     setTripPackage({ ...tripPackage, [e.target.id]: e.target.value });
   };
 
+  
   const handleCheckbox = () => {
     setTripPackage({ ...tripPackage, in_stock: !tripPackage.in_stock });
   };

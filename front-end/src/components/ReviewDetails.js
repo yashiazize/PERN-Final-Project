@@ -26,7 +26,7 @@ const ReviewDetails = ({ reviewObj, fetchReviews }) => {
 
   return (
     <section className="reviewCard">
-      <div className="card" style={{width: "50rem"}}>
+      <div className="card" style={{width: "84vw"}}>
         <div className="card-body">
           <p className="card-text">Date: {reviewObj.date}</p>
           <h5 className="card-title">{reviewObj.title}</h5>

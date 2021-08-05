@@ -34,6 +34,9 @@ const ReviewNewForm = () => {
     setReview({ ...review, [e.target.id]: e.target.value });
   };
 
+  const handleNumber = (e) => {
+    setReview({...review, rating: Number(e.target.value)})
+  }
   const dateAndTime = () => {
     let dateObj = new Date();
     let dayIndex = dateObj.getDay();
@@ -148,12 +151,14 @@ const ReviewNewForm = () => {
             Rating
           </label>
           <input
+            min="1" 
+            max="5"
             id="rating"
-            type="text"
+            type="number"
             required
             className="form-control"
             value={review.rating}
-            onChange={handleChange}
+            onChange={handleNumber}
           />
         </div>
         <input type="submit" />

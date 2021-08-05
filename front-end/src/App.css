@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Qahiri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 
 .imgContainer img {
   height: 70vh;
@@ -16,7 +15,7 @@
   background-color: rgba(255, 255, 255, 0.205);
 }
 
-.homeImg {
+.imgContainer img {
   z-index: 0;
 }
 
@@ -29,7 +28,7 @@
 }
 
 .background .card-title {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 30px;
   font-weight: 500;
 }
@@ -138,23 +137,79 @@ a:hover {
   color: white;
 }
 
-.reviewCard{
+.reviewCard {
   margin-bottom: 20px;
 }
 
 .reviewCard .card {
-  background-color:rgb(251, 249, 248);
+  background-color: rgb(251, 249, 248);
 }
 
 .reviewCardButton {
   text-align: right;
 }
 
- button {
+button {
   color: black;
   background-color: white;
 }
 
 .header5 {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 430px) {
+  .packagesList {
+    display: grid;
+    grid-template-columns: 350px;
+    justify-items: center;
+  }
+  .newFormImg {
+    display: none;
+  }
+  .newFormContainer {
+    margin-left: 2vw;
+    padding: 30px;
+    width: 95vw;
+    margin-bottom: 30px;
+  }
+  .form-control {
+    width: 80vw;
+  }
+  .editFormContainer {
+    margin-left: 2vw;
+    padding: 30px;
+    width: 95vw;
+    margin-bottom: 30px;
+  }
+  
+  .editDetailImg {
+    display: none;
+  }
+  .background .card {
+    margin-left: 25vw;
+    margin-top: 30vh;
+  }
+  .imgContainer img {
+    display: block;
+    height: 40vh;
+    width: 100vw;
+  }
+  .imgContainer .barcelona_img {
+    display: none;
+  }
+  .est {
+    margin-top: 2vh;
+    margin-left: 32vw;
+  }
+  .background {
+    position: absolute;
+    width: 100vw;
+    height: 80vh;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.205);
+  }
+  .nomadButton {
+    width: 100%;
+  }
 }

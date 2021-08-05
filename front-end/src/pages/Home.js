@@ -8,22 +8,21 @@ function Home() {
   return (
     <section>
       <div className="background">
-        <div className="card" style={{width: "45rem"}}>
+        <div className="card" style={{ width: "50vw"}}>
           <div className="card-body">
             <h5 className="card-title">Make the world your home</h5>
             <p className="card-text">
-              
             </p>
-            <Link to="/travelpackages">
-              <button>Become a Nomad</button>
+            <Link className="linkButton" to="/travelpackages">
+              <button className="nomadButton">Become a Nomad</button>
             </Link>
           </div>
         </div>
       </div>
       <div className="imgContainer">
-        <img className="homeImg" src={barcelona_img} alt="barcelona_img" />
-        <img className="homeImg" src={berlin_img} alt="berlin_img" />
-        <img className="homeImg" src={brooklyn_img} alt="brooklyn_img" />
+        <img className="brooklyn_img" src={brooklyn_img} alt="brooklyn_img" />
+        <img className="berlin_img" src={berlin_img} alt="berlin_img" />
+        <img className="barcelona_img" src={barcelona_img} alt="barcelona_img" />
       </div>
       <div className="est">
           <p> © 2021 Nomadix, Inc.</p>

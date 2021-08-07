@@ -29,11 +29,11 @@ const PackageDetails = () => {
     const getPackageDetails = async () => {
       try {
         const res = await axios.get(`${API}/travelpackages/${id}`);
-        setTripPackage(res.data.payload);
+       setTripPackage(res.data.payload);
       } catch (error) {
         console.log(error);
       }
-    };
+    }
     getPackageDetails();
   }, [id]);
 
@@ -79,7 +79,7 @@ const PackageDetails = () => {
           </div>
         </div>
       </div>
-      <ReviewList id={id}/>
+      <ReviewList id={id} />
     </section>
   );
 };

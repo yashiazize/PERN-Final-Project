@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router";
 import { apiURL } from "../util/apiURL";
 const API = apiURL();
 
-const ReviewDetails = ({ reviewObj, fetchReviews }) => {
+const ReviewDetails = ({ reviewObj,setReviews,reviews }) => {
   const { id } = useParams();
   let history = useHistory();
 
@@ -11,8 +11,9 @@ const ReviewDetails = ({ reviewObj, fetchReviews }) => {
     try {
       await axios.delete(
         `${API}/travelpackages/${id}/travelreviews/${reviewObj.id}`
-
       );
+      setReviews(reviews.filter((review) => review.id !== reviewObj.id));
+      
     } catch (error) {
       console.log(error);
     }
@@ -20,7 +21,6 @@ const ReviewDetails = ({ reviewObj, fetchReviews }) => {
 
   const handleDelete = async () => {
     await deleteReview();
-    fetchReviews();
     history.push(`/travelpackages/${id}`);
   };
 

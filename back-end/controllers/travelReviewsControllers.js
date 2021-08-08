@@ -6,7 +6,6 @@ const { getAllReviews, getReview, createReview, updateReview,deleteReview } = re
 
 reviews.get('/', async (req, res) => {
     const { packageId } = req.params
-    // console.log(`controllers: ${req.params.id}`)
     const reviews = await getAllReviews(packageId)
     res.json(reviews)
 })
@@ -35,7 +34,7 @@ reviews.put('/:reviewId', async(req, res) => {
 reviews.delete('/:reviewId', async (req,res) =>{
     const { reviewId} = req.params;
     const deletedReview = await deleteReview(reviewId);
-    res.json({ success: true, payload: deletedReview });
+    res.json(deletedReview);
 });
 
 module.exports = reviews

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import  ReviewDetails from "../components/ReviewDetails";
+import ReviewDetails from "../components/ReviewDetails";
 import axios from "axios";
 import { apiURL } from "../util/apiURL";
 
@@ -10,27 +10,25 @@ const ReviewList = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    let isMounted = true; 
     const fetchReviews = async () => {
       try {
         const res = await axios.get(`${API}/travelpackages/${id}/travelreviews`);
-        if (isMounted) setReviews(res.data.payload);
+        setReviews(res.data.payload);
       } catch (error) {
         console.log(error);
       }
     };
     fetchReviews()
-    return () => { isMounted = false }; 
-  },[reviews,id])
+  }, [id])
 
   return (
-      <section>
-          <h5 className="header5">Reviews</h5>
-          <Link to={`/travelpackages/${id}/travelreview/new`}> <button>New Review</button></Link>
-          {reviews.map((reviewObj) => {
-            return  <ReviewDetails key={reviewObj.id} reviewObj={reviewObj} setReviews={setReviews} reviews={reviews} />
-          })}
-      </section>
+    <section>
+      <h5 className="header5">Reviews</h5>
+      <Link to={`/travelpackages/${id}/travelreview/new`}> <button>New Review</button></Link>
+      {reviews.map((reviewObj) => {
+        return <ReviewDetails key={reviewObj.id} reviewObj={reviewObj} setReviews={setReviews} reviews={reviews} />
+      })}
+    </section>
   )
 };
 

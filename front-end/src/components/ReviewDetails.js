@@ -9,11 +9,12 @@ const ReviewDetails = ({ reviewObj,setReviews,reviews }) => {
 
   const deleteReview = async () => {
     try {
-      await axios.delete(
+      const res = await axios.delete(
         `${API}/travelpackages/${id}/travelreviews/${reviewObj.id}`
       );
-      setReviews(reviews.filter((review) => review.id !== reviewObj.id));
-      
+      if (res.data.success){
+        setReviews(reviews.filter((review) => review.id !== reviewObj.id));
+      }
     } catch (error) {
       console.log(error);
     }

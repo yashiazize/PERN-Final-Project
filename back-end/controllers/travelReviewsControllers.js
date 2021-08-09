@@ -15,7 +15,7 @@ reviews.get('/:reviewId', async(req, res) =>{
     const { reviewId } = req.params;
     const review = await getReview(reviewId);
     res.json(review)
-})
+}) 
 
 reviews.post('/', async (req, res) => {
     const newReview = req.body;

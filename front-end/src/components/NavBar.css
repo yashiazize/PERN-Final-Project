@@ -37,3 +37,20 @@ nav a:link {
   font-family: 'Barlow', sans-serif;
 }
 
+@media screen and (max-width: 700px) {
+  nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 35px;
+    width: auto;
+    height: 105px;
+  }
+  .newLink {
+    font-size: 5px;
+    border: 2px solid;
+    padding: 6px;
+    border-radius: 5px;
+    font-family: 'Barlow', sans-serif;
+  }
+}

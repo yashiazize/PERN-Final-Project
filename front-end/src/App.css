@@ -213,3 +213,19 @@ button {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 1030px) and (min-width: 540px){
+  .imgContainer img {
+    width: 100vw;
+    height: 55vh;
+  }
+  .imgContainer .barcelona_img {
+    display: none;
+  }
+  .packagesList {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    justify-items: center;
+    gap: 70px;
+  }
+}

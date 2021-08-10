@@ -227,5 +227,27 @@ button {
     grid-template-columns: 350px 350px;
     justify-items: center;
     gap: 70px;
+} 
+  .newFormImg {
+    display: none;
+  }
+  .newFormContainer {
+    margin-left: 2vw;
+    padding: 30px;
+    width: 95vw;
+    margin-bottom: 30px;
+  }
+  .form-control {
+    width: 80vw;
+  }
+  .editFormContainer {
+    margin-left: 2vw;
+    padding: 30px;
+    width: 95vw;
+    margin-bottom: 30px;
+  }
+  
+  .editDetailImg {
+    display: none;
   }
 }
